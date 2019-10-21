@@ -35,16 +35,6 @@ function map(array, func) {
 /*                                  Q1                                 */
 //=======================================================================
 
-/*
-Depending on data modeling concept that you have learned:
-
-Create a factory function called makeComputer that represents computers, 
-What different attributes computers may have? 
-Create two computers object from your factory function and save them in one array called computers!
-
-Note: please write one or two lines here describing your solution.
-*/
-
 //The makeCompute function returns an object with the values that correspond to the keys as set in the parameters.
 
 function makeComputer(type, color, weight) {
@@ -53,16 +43,13 @@ function makeComputer(type, color, weight) {
  	color: color,
  	weight: weight
  	};
-}
-;
+};
+
 var compA = makeComputer("xp", "red", 15);
 var compB =  makeComputer("server", "black", 14.5);
 
-
-// Write a function displayComputer that can be used to display one computer.
-
 function displayComputer(computer) {
-	return "The " + computer[type] + " computer" + " is " + computer[color] + " and weighs " + computer[weight] ;
+	return "The " + computer[type] + " computer" + " is " + computer[color] + " and weighs " + computer[weight];
 }
 
 //=============================================================================
@@ -82,6 +69,8 @@ function uppercaseAll(arrayOfStrings) {
 /*                                  Q3                                       */
 //=============================================================================
 
+// The predicate criteria is higher than 500,000,000. This is passed into the filter function
+//to only return the elements that fit that criteria.
 
 var data = [
   {
@@ -102,8 +91,6 @@ var data = [
   }
 ];
 
-// The predicate criteria is higher than 500,000,000. This is passed into the filter function
-//to only return the elements that fit that criteria.
 
 function highestPopulation(arrayOfObjects) {
 
