@@ -155,16 +155,17 @@ function halveAll(numbers) {
 /*                                  Q5                                       */
 //=============================================================================
 
-/*
-Write a function called values that accepts an object as a parameter, and outputs an array of the object's values. 
-Solve it using one of the most appropriate helpers functions(each,map,filter).
+// I used the map function to extract the values according corresponding to each key
+// in the object. Please note that I used bracket notation instead of dot notation 
+// so that the function does not look of a specific "key" called key but rather iterates 
+// over all the keys and extracts the values.
 
-values({first : 5, second: 'something' , third : 129}) ==> [5, 'something', 129];
-
-Note: please write one or two lines here describing your solution.
-*/
 function values(obj) {
-  // TODO: your code here
+
+	return map (obj, (elem, key)=>{
+		return obj[key];
+	});
+
 }
 
-//Good Luck :))
+
