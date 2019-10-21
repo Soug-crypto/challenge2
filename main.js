@@ -45,14 +45,24 @@ Create two computers object from your factory function and save them in one arra
 Note: please write one or two lines here describing your solution.
 */
 
+//The makeCompute function returns an object with the values that correspond to the keys as set in the parameters.
+
 function makeComputer(type, color, weight) {
-  // TODO: Your code here
+ return {
+ 	type: type,
+ 	color: color,
+ 	weight: weight
+ 	};
 }
+;
+var compA = makeComputer("xp", "red", 15);
+var compB =  makeComputer("server", "black", 14.5);
+
 
 // Write a function displayComputer that can be used to display one computer.
 
 function displayComputer(computer) {
-  // TODO: Your code here
+	return "The " computer[type] + " computer" + " is " + computer[color] + " and weighs " + computer[weight] ;
 }
 
 //=============================================================================
@@ -72,8 +82,13 @@ var strArr = ['hello', 'world', 'whirled', 'peas'];
 uppercaseAll(strArr); ==> [ 'HELLO', 'WORLD', 'WHIRLED', 'PEAS' ]
 */
 
+
+//The UppecaseAll uses the map function to convert each array element to uppercase.
+
 function uppercaseAll(arrayOfStrings) {
-  // TODO: your code here
+	return map(arrayOfStrings, (str, i)=>{
+		return str.toUpperCase()
+	});
 }
 
 //=============================================================================
@@ -111,28 +126,29 @@ var data = [
   }
 ];
 
+// The predicate criteria is higher than 500,000,000. This is passed into the filter function
+//to only return the elements that fit that criteria.
+
 function highestPopulation(arrayOfObjects) {
-  // TODO: your code here
+
+	return filter (arrayOfObjects, (elem, key)=>{
+		return elem.population > 500000000;
+	});	
+
 }
 
 //=============================================================================
 /*                              Q4                                           */
 //=============================================================================
 
-/*
-Write a function halveAll that takes an array of numbers as a input 
-and returns an array of all of those numbers halved (divided by two).
 
-Note: solve it using the most appropriate helper functions(each,map,filter)
-
-var numsArray = [2, 6, 20, 8, 14];
-halveAll(numsArray); ==> [ 1, 3, 10, 4, 7 ]
-
-Note: please write one or two lines here describing your solution.
-*/
+// The appropriate helper function here is map since we need to carry out a halving function 
+// on each of the element of the array.
 
 function halveAll(numbers) {
-  // your code is here
+	return map(numbers, (elem)=>{
+		return elem/2;
+	});
 }
 
 //=============================================================================
