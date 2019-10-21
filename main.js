@@ -62,25 +62,12 @@ var compB =  makeComputer("server", "black", 14.5);
 // Write a function displayComputer that can be used to display one computer.
 
 function displayComputer(computer) {
-	return "The " computer[type] + " computer" + " is " + computer[color] + " and weighs " + computer[weight] ;
+	return "The " + computer[type] + " computer" + " is " + computer[color] + " and weighs " + computer[weight] ;
 }
 
 //=============================================================================
 /*                                  Q2                                       */
 //=============================================================================
-
-/*
-Write a function that takes an array of strings as a input
-and returns an array of all of those strings, but transformed to upper case.
-
-You can use toUpperCase method to convert a string to upper case. 
-Solve it using the most appropriate helper functions(each,map,filter).
-
-Note: please write one or two lines here describing your solution.
-
-var strArr = ['hello', 'world', 'whirled', 'peas'];
-uppercaseAll(strArr); ==> [ 'HELLO', 'WORLD', 'WHIRLED', 'PEAS' ]
-*/
 
 
 //The UppecaseAll uses the map function to convert each array element to uppercase.
@@ -95,17 +82,6 @@ function uppercaseAll(arrayOfStrings) {
 /*                                  Q3                                       */
 //=============================================================================
 
-/*
-Write a function that takes array of objects as an input and returns an array
-with only the countries that have a population higher than 500 million.
-
-Solve it using one of the most appropriate helperthe helpers functions(each,map,filter).
-
-highestPopulation(data); ==> [{country: "China", population: 1409517397},{country: "India", population: 1339180127}]
-Note: please write one or two lines here describing your solution.
-
-Here’s the data you’ll work with:
-*/
 
 var data = [
   {
